@@ -16,7 +16,7 @@ public class PetBean {
 
 	private Pet pet;
 	//private PetDao petDao;
-	private List<Pet>  lista = new ArrayList<>();
+	private List<Pet>  lista = new ArrayList<Pet>();
 
 	@PostConstruct
 	protected void initialize() {
