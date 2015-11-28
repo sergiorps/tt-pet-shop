@@ -14,16 +14,9 @@ import br.com.tt.web.pet.model.Pet;
 @SessionScoped
 public class PetBean {
 
-	private Pet pet;
-	//private PetDao petDao;
-	private List<Pet>  lista = new ArrayList<Pet>();
-
-	@PostConstruct
-	protected void initialize() {
-		//petDao = new PetDao();
-		pet = new Pet();
-		//lista = // petDao.buscarTodos();
-	}
+	private Pet pet = new Pet();
+	private PetDao petDao = new PetDao();
+	private List<Pet> lista = new ArrayList<Pet>();
 
 	public Pet getPet() {
 		return pet;
@@ -34,9 +27,9 @@ public class PetBean {
 	}
 
 	public void salvar() {
-		lista.add(pet);
 		pet = new Pet();
-		//petDao.salvar(pet);
+		petDao.salvar(pet);
+		lista = petDao.buscarTodos();
 	}
 
 	public List<Pet> getLista() {
@@ -47,10 +40,4 @@ public class PetBean {
 		this.lista = lista;
 	}
 
-
 }
-
-
-
-
-

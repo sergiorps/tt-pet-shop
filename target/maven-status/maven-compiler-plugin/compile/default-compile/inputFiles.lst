@@ -1,6 +1,10 @@
+C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\controller\bean\ProprietarioBean.java
 C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\model\Proprietario.java
+C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\validador\CpfValidador.java
 C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\model\Pet.java
+C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\util\MessageUtil.java
 C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\dao\PetDao.java
 C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\layout\LayoutController.java
+C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\conversor\CpfConversor.java
 C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\controller\bean\PetBean.java
-C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\dao\JpaUitil.java
+C:\JAVA-WEB-SAB\workspace\tt-pet-shop\src\main\java\br\com\tt\web\pet\util\CpfUtil.java

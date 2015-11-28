@@ -18,7 +18,10 @@
 						value="#{proprietarioBean.proprietario.nome}" required="true" />
 					<p:outputLabel value="CPF:" for="cpf" />
 					<p:inputMask mask="999.999.999-99" id="cpf"
-						value="#{proprietarioBean.proprietario.cpf}" required="true" />
+						value="#{proprietarioBean.proprietario.cpf}" required="true">
+						<f:converter converterId="cpfConversor" />
+						<f:validator validatorId="cpfValidador" />
+					</p:inputMask>
 
 				</h:panelGrid>
 				<p:commandButton value="Cadastrar"

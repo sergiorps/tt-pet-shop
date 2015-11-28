@@ -15,8 +15,7 @@ public class CpfConversor implements Converter {
 	}
 
 	public String getAsString(FacesContext context, UIComponent component, Object value) {
-		// TODO Auto-generated method stub
-		return null;
+		return CpfUtil.adicionaMascara((String) value);
 	}
 
 }
