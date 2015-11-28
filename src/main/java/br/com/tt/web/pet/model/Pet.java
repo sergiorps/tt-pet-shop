@@ -8,6 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
+/**
+ * @author instrutor
+ *
+ */
 @Entity
 public class Pet implements Serializable {
 
@@ -25,7 +29,7 @@ public class Pet implements Serializable {
 
 	private String tipo;
 	
-	private char sexo;
+	private String sexo;
 
 	public Long getId() {
 		return id;
@@ -67,13 +71,15 @@ public class Pet implements Serializable {
 		this.tipo = tipo;
 	}
 
-	public char getSexo() {
+	public String getSexo() {
 		return sexo;
 	}
 
-	public void setSexo(char sexo) {
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
+
+
 	
 
 }

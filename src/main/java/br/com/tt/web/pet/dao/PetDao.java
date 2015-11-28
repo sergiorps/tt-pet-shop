@@ -14,27 +14,20 @@ public class PetDao {
 
 
 	public void salvar(Pet pet) {
-	EntityManager em = em();
-		try {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu_pet_shop");
+		EntityManager em = emf.createEntityManager();
+
 			em.getTransaction().begin();
-			em.merge(pet);
+			em.persist(pet);
 			em.getTransaction().commit();
-		} catch (Exception e) {
-			em.getTransaction().rollback();
-		}finally{
-			em.close();
-		}
+
 	}
 
-	private EntityManager em() {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu_pet_shop");
-			EntityManager em = emf.createEntityManager();
-			System.out.println(em.isOpen());
-		return em;
-	}
+
 
 	public List<Pet> buscarTodos() {
-		EntityManager em = em();
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu_pet_shop");
+		EntityManager em = emf.createEntityManager();
 		String consulta = "SELECT p FROM Pet p";
 		TypedQuery<Pet> query = em.createQuery(consulta, Pet.class);
 
@@ -45,6 +38,8 @@ public class PetDao {
 	}
 	public static void main(String[] args) {
 		PetDao petDao = new PetDao();
-		petDao.salvar(new Pet());
+		Pet pet = new Pet();
+		pet.setNome("aaaaaaaaaa");
+		petDao.salvar(pet);
 	}
 }
