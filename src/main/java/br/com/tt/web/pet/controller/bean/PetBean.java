@@ -35,6 +35,7 @@ public class PetBean {
 
 	public void salvar() {
 		lista.add(pet);
+		pet = new Pet();
 		//petDao.salvar(pet);
 	}
 

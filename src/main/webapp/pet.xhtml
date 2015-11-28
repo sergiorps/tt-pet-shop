@@ -45,24 +45,21 @@
 					<p:message for="sexo" />
 
 
-					<p:commandButton value="Cadastrar" action="#{petBean.salvar}" update="gridPet" />
+					<p:commandButton value="Cadastrar" 
+					action="#{petBean.salvar}" update="@form" />
 
 				</h:panelGrid>
 				<br />
 				<br />
 				<br />
-				<p:dataTable value="#{petBean.lista}" var="pet" emptyMessage="Não possui Pet Cadastrado">
-
+				<p:dataTable value="#{petBean.lista}" var="pet"
+				 emptyMessage="Não possui Pet Cadastrado">
 					<p:column headerText="Nome">
-						<h:outputLabel value="pet.nome" />
+						<h:outputLabel value="#{pet.nome}" />
 					</p:column>
 					<p:column headerText="Sexo">
-						<h:outputLabel value="pet.sexo" />
-
+						<h:outputLabel value="#{pet.sexo}" />
 					</p:column>
-
-
-
 				</p:dataTable>
 			</p:panel>
 		</h:form>
