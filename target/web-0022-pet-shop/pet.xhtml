@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<ui:composition template="_template.xhtml">
+	<ui:define name="conteudo">
+		<h:form>
+
+			<p:panel header="Pet">
+				<h:panelGrid columns="3" id="gridPet">
+					<p:outputLabel value="Nome:" for="nome" />
+					<p:inputText id="nome" value="#{petBean.pet.nome}" required="true" />
+					<p:message id="msgNome" for="nome" />
+
+
+					<p:outputLabel value="Cor:" for="cor" />
+
+					<p:selectOneMenu id="cor" value="#{petBean.pet.cor}" style="width:125px">
+						<f:selectItem itemLabel="Selecione" itemValue="" />
+						<f:selectItem itemLabel="Preto" itemValue="PRETO" />
+						<f:selectItem itemLabel="Branco" itemValue="BRANCO" />
+						<f:selectItem itemLabel="Bardo" itemValue="BARDO" />
+
+					</p:selectOneMenu>
+					<p:message for="cor" />
+
+
+					<p:outputLabel value="Raça:" for="raca" />
+					<p:inputText id="raca" value="#{petBean.pet.raca}" />
+					<p:message for="raca" />
+
+
+					<p:outputLabel value="Espécie:" for="tipo" />
+					<p:inputText id="tipo" value="#{petBean.pet.tipo}" required="true" />
+					<p:message for="tipo" />
+
+					<p:outputLabel value="Sexo:" for="sexo" />
+
+					<p:selectOneRadio id="sexo" value="#{petBean.pet.sexo}">
+						<f:selectItem itemLabel="Fêmea" itemValue="F" />
+						<f:selectItem itemLabel="Macho" itemValue="M" />
+
+					</p:selectOneRadio>
+					<p:message for="sexo" />
+
+
+					<p:commandButton value="Cadastrar" action="#{petBean.salvar}" update="gridPet" />
+					
+					
+					<p:dataTable value="#{petBean.buscarTodos}" var="pet">
+					
+					<p:column headerText="Nome">
+					<h:outputLabel value="pet.nome" />
+					
+					</p:column>
+					
+					
+					
+					</p:dataTable>
+					
+
+				</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
